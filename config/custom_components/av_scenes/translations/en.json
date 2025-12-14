@@ -1,0 +1,144 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up AV Scenes",
+        "description": "This integration allows you to create activity-based scenes for your AV equipment. After setup, use the options flow to configure rooms and activities."
+      }
+    },
+    "abort": {
+      "already_configured": "This integration is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "room_menu": {
+        "title": "Room Management",
+        "description": "Configured rooms:\n{rooms}",
+        "data": {
+          "action": "Action"
+        }
+      },
+      "add_room": {
+        "title": "Add Room",
+        "description": "{info}",
+        "data": {
+          "room_id": "Area / Room",
+          "room_name": "Custom Display Name (optional)"
+        }
+      },
+      "add_custom_room": {
+        "title": "Add Custom Room",
+        "description": "{info}",
+        "data": {
+          "custom_room_id": "Room ID (e.g., home_cinema)",
+          "custom_room_name": "Room Name (e.g., Home Cinema)"
+        }
+      },
+      "select_room": {
+        "title": "Select Room",
+        "description": "Choose a room to edit",
+        "data": {
+          "room_id": "Room"
+        }
+      },
+      "activity_menu": {
+        "title": "Activities for {room}",
+        "description": "Configured activities:\n{activities}",
+        "data": {
+          "action": "Action"
+        }
+      },
+      "add_activity": {
+        "title": "Add Activity to {room}",
+        "description": "Create a new activity (e.g., Watch Movie, Listen Music)",
+        "data": {
+          "activity_name": "Activity Name"
+        }
+      },
+      "select_activity": {
+        "title": "Select Activity",
+        "description": "Choose an activity to edit in {room}",
+        "data": {
+          "activity_name": "Activity"
+        }
+      },
+      "edit_activity": {
+        "title": "Edit Activity: {activity}",
+        "description": "Current devices:\n{devices}",
+        "data": {
+          "action": "Action"
+        }
+      },
+      "rename_activity": {
+        "title": "Rename Activity",
+        "description": "Current name: {old_name}",
+        "data": {
+          "new_name": "New Activity Name"
+        }
+      },
+      "delete_activity": {
+        "title": "Delete Activity",
+        "description": "Select activity to delete from {room}\n\n{warning}",
+        "data": {
+          "activity_name": "Activity to Delete"
+        }
+      },
+      "add_device": {
+        "title": "Add Device to {activity}",
+        "description": "Select a media player to add to this activity in {room}",
+        "data": {
+          "entity_id": "Media Player"
+        }
+      },
+      "add_device_details": {
+        "title": "Configure Device: {device}",
+        "description": "Set input source and other settings for {device}",
+        "data": {
+          "input_source": "Input Source",
+          "power_on_delay": "Power-on Delay (seconds)",
+          "is_volume_controller": "Use this device for volume control",
+          "volume_level": "Initial Volume Level (%)"
+        }
+      },
+      "device_menu": {
+        "title": "Devices in Activity",
+        "description": "Configured devices:\n{devices}",
+        "data": {
+          "action": "Action"
+        }
+      },
+      "select_device_to_edit": {
+        "title": "Select Device to Edit",
+        "description": "Choose a device to edit",
+        "data": {
+          "device_id": "Device"
+        }
+      },
+      "edit_device": {
+        "title": "Edit Device: {device}",
+        "description": "Modify device configuration",
+        "data": {
+          "input_source": "Input Source",
+          "power_on_delay": "Power-on Delay (seconds)",
+          "is_volume_controller": "Use this device for volume control",
+          "volume_level": "Initial Volume Level (%)"
+        }
+      },
+      "select_device_to_delete": {
+        "title": "Delete Device",
+        "description": "{warning}",
+        "data": {
+          "device_id": "Device to Delete"
+        }
+      }
+    },
+    "error": {
+      "already_exists": "This item already exists",
+      "entity_not_found": "Entity not found in Home Assistant",
+      "invalid_name": "Invalid name provided",
+      "room_not_found": "Room not found",
+      "unknown": "Unknown error occurred"
+    }
+  }
+}

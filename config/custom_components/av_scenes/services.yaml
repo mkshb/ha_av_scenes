@@ -1,0 +1,34 @@
+start_activity:
+  name: Start Activity
+  description: Start an activity in a room
+  fields:
+    room:
+      name: Room
+      description: The room identifier
+      required: true
+      example: "living_room"
+      selector:
+        text:
+    activity:
+      name: Activity
+      description: The activity name to start
+      required: true
+      example: "watch_movie"
+      selector:
+        text:
+
+stop_activity:
+  name: Stop Activity
+  description: Stop the current activity in a room
+  fields:
+    room:
+      name: Room
+      description: The room identifier
+      required: true
+      example: "living_room"
+      selector:
+        text:
+
+reload:
+  name: Reload
+  description: Reload the AV Scenes configuration

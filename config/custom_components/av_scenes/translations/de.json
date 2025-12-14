@@ -1,0 +1,174 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "AV Scenes einrichten",
+        "description": "Diese Integration ermöglicht es dir, aktivitätsbasierte Szenen für deine AV-Geräte zu erstellen. Nach der Einrichtung kannst du über den Optionen-Flow Räume und Aktivitäten konfigurieren."
+      }
+    },
+    "abort": {
+      "already_configured": "Diese Integration ist bereits konfiguriert"
+    }
+  },
+  "options": {
+    "step": {
+      "room_menu": {
+        "title": "Raumverwaltung",
+        "description": "Konfigurierte Räume:\n{rooms}",
+        "data": {
+          "action": "Aktion"
+        }
+      },
+      "add_room": {
+        "title": "Raum hinzufügen",
+        "description": "{info}",
+        "data": {
+          "room_id": "Bereich / Raum",
+          "room_name": "Eigener Anzeigename (optional)"
+        }
+      },
+      "add_custom_room": {
+        "title": "Eigenen Raum hinzufügen",
+        "description": "{info}",
+        "data": {
+          "custom_room_id": "Raum-ID (z.B. heimkino)",
+          "custom_room_name": "Raumname (z.B. Heimkino)"
+        }
+      },
+      "select_room": {
+        "title": "Raum auswählen",
+        "description": "Wähle einen Raum zum Bearbeiten",
+        "data": {
+          "room_id": "Raum"
+        }
+      },
+      "activity_menu": {
+        "title": "Aktivitäten für {room}",
+        "description": "Konfigurierte Aktivitäten:\n{activities}",
+        "data": {
+          "action": "Aktion"
+        }
+      },
+      "add_activity": {
+        "title": "Aktivität zu {room} hinzufügen",
+        "description": "Erstelle eine neue Aktivität (z.B. Film schauen, Musik hören)",
+        "data": {
+          "activity_name": "Aktivitätsname"
+        }
+      },
+      "select_activity": {
+        "title": "Aktivität auswählen",
+        "description": "Wähle eine Aktivität zum Bearbeiten in {room}",
+        "data": {
+          "activity_name": "Aktivität"
+        }
+      },
+      "edit_activity": {
+        "title": "Aktivität bearbeiten: {activity}",
+        "description": "Aktuelle Geräte:\n{devices}",
+        "data": {
+          "action": "Aktion"
+        }
+      },
+      "rename_activity": {
+        "title": "Aktivität umbenennen",
+        "description": "Aktueller Name: {old_name}",
+        "data": {
+          "new_name": "Neuer Aktivitätsname"
+        }
+      },
+      "delete_activity": {
+        "title": "Aktivität löschen",
+        "description": "Wähle eine zu löschende Aktivität aus {room}\n\n{warning}",
+        "data": {
+          "activity_name": "Zu löschende Aktivität"
+        }
+      },
+      "add_device": {
+        "title": "Gerät zu {activity} hinzufügen",
+        "description": "Wähle einen Media Player für diese Aktivität in {room}",
+        "data": {
+          "entity_id": "Media Player"
+        }
+      },
+      "add_device_details": {
+        "title": "Gerät konfigurieren: {device}",
+        "description": "Eingangsquelle und weitere Einstellungen für {device} festlegen",
+        "data": {
+          "input_source": "Eingangsquelle",
+          "power_on_delay": "Einschaltverzögerung (Sekunden)",
+          "is_volume_controller": "Dieses Gerät für Lautstärkeregelung verwenden",
+          "volume_level": "Anfangslautstärke (%)"
+        }
+      },
+      "device_menu": {
+        "title": "Geräte in Aktivität",
+        "description": "Konfigurierte Geräte:\n{devices}",
+        "data": {
+          "action": "Aktion"
+        }
+      },
+      "select_device_to_edit": {
+        "title": "Gerät zum Bearbeiten auswählen",
+        "description": "Wähle ein Gerät zum Bearbeiten",
+        "data": {
+          "device_id": "Gerät"
+        }
+      },
+      "edit_device": {
+        "title": "Gerät bearbeiten: {device}",
+        "description": "Gerätekonfiguration ändern",
+        "data": {
+          "input_source": "Eingangsquelle",
+          "power_on_delay": "Einschaltverzögerung (Sekunden)",
+          "is_volume_controller": "Dieses Gerät für Lautstärkeregelung verwenden",
+          "volume_level": "Anfangslautstärke (%)"
+        }
+      },
+      "select_device_to_delete": {
+        "title": "Gerät löschen",
+        "description": "{warning}",
+        "data": {
+          "device_id": "Zu löschendes Gerät"
+        }
+      }
+    },
+    "error": {
+      "already_exists": "Dieses Element existiert bereits",
+      "entity_not_found": "Entität wurde in Home Assistant nicht gefunden",
+      "invalid_name": "Ungültiger Name angegeben",
+      "room_not_found": "Raum nicht gefunden",
+      "unknown": "Unbekannter Fehler aufgetreten"
+    }
+  },
+  "services": {
+    "start_activity": {
+      "name": "Aktivität starten",
+      "description": "Startet eine Aktivität in einem Raum",
+      "fields": {
+        "room": {
+          "name": "Raum",
+          "description": "Die Raum-ID"
+        },
+        "activity": {
+          "name": "Aktivität",
+          "description": "Der Name der zu startenden Aktivität"
+        }
+      }
+    },
+    "stop_activity": {
+      "name": "Aktivität stoppen",
+      "description": "Stoppt die aktuelle Aktivität in einem Raum",
+      "fields": {
+        "room": {
+          "name": "Raum",
+          "description": "Die Raum-ID"
+        }
+      }
+    },
+    "reload": {
+      "name": "Neu laden",
+      "description": "Lädt die AV Scenes Konfiguration neu"
+    }
+  }
+}
