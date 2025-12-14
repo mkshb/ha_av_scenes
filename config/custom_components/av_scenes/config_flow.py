@@ -9,7 +9,7 @@ import voluptuous as vol
 from homeassistant import config_entries
 from homeassistant.core import callback
 from homeassistant.data_entry_flow import FlowResult
-from homeassistant.helpers import area_registry as ar
+from homeassistant.helpers import area_registry as ar, selector
 import homeassistant.helpers.config_validation as cv
 
 from .const import (

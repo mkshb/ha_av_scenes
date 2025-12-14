@@ -17,6 +17,14 @@
         "description": "Konfigurierte Räume:\n{rooms}",
         "data": {
           "action": "Aktion"
+        },
+        "data_description": {
+          "action": "Wähle eine Aktion"
+        },
+        "menu_options": {
+          "add_room": "Neuen Raum hinzufügen",
+          "edit_room": "Bestehenden Raum bearbeiten",
+          "finish": "Fertigstellen und speichern"
         }
       },
       "add_room": {
